@@ -4,22 +4,42 @@
 #
 Name     : mvn-scalatest-maven-plugin
 Version  : 1
-Release  : 1
+Release  : 2
 URL      : https://repo.maven.apache.org/maven2/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.jar
 Source0  : https://repo.maven.apache.org/maven2/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.jar
 Source1  : https://repo.maven.apache.org/maven2/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
+Requires: mvn-scalatest-maven-plugin-data = %{version}-%{release}
 
 %description
 No detailed description available
+
+%package data
+Summary: data components for the mvn-scalatest-maven-plugin package.
+Group: Data
+
+%description data
+data components for the mvn-scalatest-maven-plugin package.
+
 
 %prep
 
 %build
 
 %install
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalatest/scalatest-maven-plugin/1.0
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/scalatest/scalatest-maven-plugin/1.0
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/scalatest/scalatest-maven-plugin/1.0
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/scalatest/scalatest-maven-plugin/1.0
+
 
 %files
 %defattr(-,root,root,-)
+
+%files data
+%defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.jar
+/usr/share/java/.m2/repository/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.pom
