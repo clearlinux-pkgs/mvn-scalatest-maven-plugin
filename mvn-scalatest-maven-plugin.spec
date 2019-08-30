@@ -4,7 +4,7 @@
 #
 Name     : mvn-scalatest-maven-plugin
 Version  : 1
-Release  : 2
+Release  : 3
 URL      : https://repo.maven.apache.org/maven2/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.jar
 Source0  : https://repo.maven.apache.org/maven2/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.jar
 Source1  : https://repo.maven.apache.org/maven2/org/scalatest/scalatest-maven-plugin/1.0/scalatest-maven-plugin-1.0.pom
